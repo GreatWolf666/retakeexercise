@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="default">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Attractions</title>
+</head>
+<body>
+<div layout:fragment="content">
+    <h1>Attractions</h1>
+    <table>
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>Price</th>
+            <th>Longitude</th>
+            <th>Latitude</th>
+            <th>Category</th>
+            <th>Duration</th>
+            <th>Recommended Age</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="attraction : ${allAttractions}">
+            <td th:text="attraction.name">
+                Name
+            </td>
+            <td th:text="attraction.city">
+                City
+            </td>
+            <td th:text="attraction.price">
+                Price
+            </td>
+            <td th:text="attraction.longitude">
+                Longitude
+            </td>
+            <td th:text="attraction.latitude">
+                Latitude
+            </td>
+            <td th:text="attraction.category">
+                Category
+            </td>
+            <td th:text="attraction.duration">
+                Duration
+            </td>
+            <td th:text="attraction.recommendedAge">
+                Recommended Age
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>
